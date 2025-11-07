@@ -1,0 +1,145 @@
+.loading-container {
+  margin: 0;
+  background-color: #F5F0E8; /* background ng loading screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+/* 🔸 Loader container (bar → circle) */
+#loader {
+  width: 300px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(186, 142, 105, 0.4);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: morphToCircle 0.5s ease-in-out 0.5s forwards,
+             enlarge 1s ease-in-out 1s forwards,
+             fadeOut 0.8s ease-in-out 2s forwards;
+}
+
+/* 🔸 Inner progress bar */
+.loading-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #BA8E69;
+  animation: fillBar 0.3s linear forwards;
+}
+
+/* 🔸 Circle (same size as loader) */
+.circle {
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #BA8E69;
+  animation: fadeIn 0.5s ease-in-out 1s forwards,
+             enlargeCircle 0.1s ease-in-out 0.1s forwards,
+             fadeOut 0.8s ease-in-out 5s forwards;
+}
+
+/* 🔸 Logo inside the circle */
+.circle img {
+  width: 20%;
+  opacity: 0;
+  animation: fadeInLogo 0.3s ease-in-out 1s forwards,       /* 🕐 agad after morph */
+             enlargeLogo 0.8s ease-in-out 1.1s forwards;    /* sabay grow with circle */
+}
+
+/* ========== Animations ========== */
+@keyframes fillBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes morphToCircle {
+  0% { width: 300px; height: 20px; border-radius: 10px; }
+  100% { width: 80px; height: 80px; border-radius: 50%; background-color: #fff; }
+}
+
+@keyframes enlarge {
+  0% { transform: scale(1); }
+  100% { transform: scale(3.5); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInLogo {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes enlargeLogo {
+  0% { transform: scale(1); }
+  100% { transform: scale(2.5); }
+}
+
+@keyframes enlargeCircle {
+  0% { transform: scale(1); }
+  100% { transform: scale(2.5); }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0; }
+}
+
+
+/* 📱 Mobile: screen width ≤ 768px */
+@media (max-width: 768px) {
+  #loader {
+    width: 200px; /* mas maliit yung loading bar */
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle img {
+    width: 20%; /* adjust as needed — mas maliit or bigger */
+  }
+
+  @keyframes morphToCircle {
+  0% { width: 200px; height: 20px; border-radius: 10px; }
+  100% { width: 80px; height: 80px; border-radius: 50%; background-color: #fff; }
+}
+}
+
+/* 📱 Extra small: screen width ≤ 480px */
+@media (max-width: 480px) {
+  #loader {
+    width: 150px;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .circle img {
+    width: 20%;
+  }
+
+  @keyframes morphToCircle {
+  0% { width: 150px; height: 20px; border-radius: 10px; }
+  100% { width: 50px; height: 50px; border-radius: 50%; background-color: #fff; }
+}
+}

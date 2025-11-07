@@ -1,0 +1,19 @@
+body {
+  background-color: #F5F0E8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #6A2A2A;
+  text-align: center;
+}
+
+Hidden muna yung homepage 
+.homepage {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.homepage.show {
+  display: block;
+  opacity: 1;
+}
