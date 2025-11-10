@@ -7,16 +7,21 @@ loader.addEventListener("animationend", (e) => {
   if (e.animationName === "fadeOut") { // hihintayin niyang matapos 'yung fadeOut animation
     loadingContainer.style.display = "none";
     homepage.classList.add("show");
+    document.body.classList.remove("loading"); // <-- enable scrolling
   }
 });
 
 // random hero image selector
-const hero = document.getElementById('hero');
-const images = [
-  'coffee1.jpg',
-  'coffee2.jpg',
-  'coffee3.jpg'
-];
+const heroImages = document.querySelectorAll('.hero-image');
+let current = 0;
 
-const randomImage = images[Math.floor(Math.random() * images.length)];
-hero.style.backgroundImage = `url(${randomImage})`;
+function nextHero() {
+  heroImages[current].classList.remove('active');
+  current = (current + 1) % heroImages.length;
+  heroImages[current].classList.add('active');
+}
+
+// Start slideshow every 5 seconds
+setInterval(nextHero, 5000);
+
+
