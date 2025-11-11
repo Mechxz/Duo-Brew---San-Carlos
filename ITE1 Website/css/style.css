@@ -28,7 +28,7 @@ body.loading {
   width: 100%;
 }
 /* Hero slideshow: fixed behind content */
-.overlay {
+.hero-slideshow {
   position: fixed;
   top: 0;
   left: 0;
@@ -51,18 +51,61 @@ body.loading {
 }
 /* Hero content fixed on top of hero images */
 .hero-content {
-  position: fixed; /* stays in viewport */
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  top: 35%;
+  left: 30%;
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
-  color: #fff;
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+/* Container ng logo + text */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 1000px; /* adjust mo ito depende sa logo */
+}
+
+/* Logo mismo */
+.hero-logo {
+  width: 50vw;
+  height: auto;
+}
+
+/* Text overlay */
+.hero-text {
+  position: absolute;
+  top: 75%; /* adjust to move text up/down */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* controls wrapping */
+  text-align: center;
+  color: var(--primary-color);
+    /* Important for breaking long words */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word; /* ensures long words break */
+}
+
+.hero-text h1 {
+  font-size: clamp(10px, 3vw, 40px); /* responsive */
+  font-weight: 200;
+  line-height: 1.1;
+  margin: 0;
+}
+
+
+
+
+
 /* Other sections scroll normally */
 .content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: 50px 20px;
   background-color: var(--primary-color);
 }
@@ -87,3 +130,66 @@ body.loading {
   background-color: var(--primary-color);
   font-family: var(--font-family);
 }
+
+img {
+  user-select: none;          /* hindi ma-select */
+  -webkit-user-drag: none;    /* iwas drag sa WebKit browsers */
+  pointer-events: none;       /* optional: hindi ma-click */
+}
+
+
+
+
+
+/* 📱 Mobile: screen width ≤ 768px */
+@media (max-width: 768px) {
+  .hero-content {
+    top: 35%; /* center content more vertically */
+    left: 35%; /* center horizontally */
+  }
+  .logo-wrapper {
+    width: 80vw; /* shrink container so logo scales down smoothly */
+  }
+
+  .hero-logo {
+    width: 70vw; /* make logo larger relative to viewport on tablets */
+  }
+
+  .hero-text {
+    top: 80%; /* move text a little lower */
+    width: 60%; /* allow more wrap space */
+  }
+
+  .hero-text h1 {
+    font-size: clamp(20px, 4vw, 30px); /* smaller text scaling */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+/* 📱 Extra small: screen width ≤ 480px */
+@media (max-width: 480px) {
+  .hero-content {
+    top: 35%; /* adjust vertical centering */
+    left: 40%; /* center horizontally */
+  }
+  .logo-wrapper {
+    width: 90vw; /* almost full width on mobile */
+  }
+
+  .hero-logo {
+    width: 85vw; /* logo appears more visible on small screens */
+  }
+
+  .hero-text {
+    top: 85%;
+    width: 95%;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(16px, 6vw, 36px);
+    line-height: 1.2;
+  }
+}
+
