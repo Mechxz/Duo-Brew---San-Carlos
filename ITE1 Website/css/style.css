@@ -62,20 +62,17 @@ body.loading {
   flex-direction: column;
   align-items: center;
 }
-
 /* Container ng logo + text */
 .logo-wrapper {
   position: relative;
   display: inline-block;
   width: 1000px; /* adjust mo ito depende sa logo */
 }
-
 /* Logo mismo */
 .hero-logo {
   width: 50vw;
   height: auto;
 }
-
 /* Text overlay */
 .hero-text {
   position: absolute;
@@ -84,19 +81,71 @@ body.loading {
   transform: translate(-50%, -50%);
   width: 80%; /* controls wrapping */
   text-align: center;
-  color: var(--primary-color);
+  color: #EBDECD;
     /* Important for breaking long words */
   word-wrap: break-word;
   overflow-wrap: break-word;
   word-break: break-word; /* ensures long words break */
 }
-
 .hero-text h1 {
   font-size: clamp(10px, 3vw, 40px); /* responsive */
   font-weight: 200;
   line-height: 1.1;
   margin: 0;
 }
+/* BUTTON */ 
+.button-explore {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+}
+
+button {
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: #E6E0D4;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+button:hover {
+  letter-spacing: 3px;
+  color: #473809;
+}
+button:active {
+  letter-spacing: 3px;
+  color: #473809;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.coffee-btn:hover {
+  background-color: #B89A68;
+  box-shadow: #3E2C24 0px 7px 29px 0px;
+}
+.coffee-btn:active {
+  background-color: #B89A68;
+  box-shadow: #3E2C24 0px 0px 0px 0px;
+}
+.milktea-btn:hover {
+  background-color: #E2C8A8;
+  box-shadow: #8A6F4E 0px 7px 29px 0px;
+}
+.milktea-btn:active {
+  background-color: #E2C8A8;
+  box-shadow: #8A6F4E 0px 0px 0px 0px;
+}
+
+
 
 
 
@@ -109,6 +158,12 @@ body.loading {
   padding: 50px 20px;
   background-color: var(--primary-color);
 }
+
+
+
+
+
+
 
 
 
@@ -152,7 +207,7 @@ img {
   }
 
   .hero-logo {
-    width: 70vw; /* make logo larger relative to viewport on tablets */
+    width: 80vw; /* make logo larger relative to viewport on tablets */
   }
 
   .hero-text {
@@ -179,7 +234,7 @@ img {
   }
 
   .hero-logo {
-    width: 85vw; /* logo appears more visible on small screens */
+    width: 90vw; /* logo appears more visible on small screens */
   }
 
   .hero-text {
