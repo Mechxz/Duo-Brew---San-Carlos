@@ -87,7 +87,7 @@ body.loading {
   word-break: break-word; /* ensures long words break */
 }
 .hero-text h1 {
-  font-size: clamp(10px, 3vw, 40px); /* responsive */
+  font-size: clamp(10px, 3vw, 35px); /* responsive */
   font-weight: 200;
   line-height: 1.1;
   margin: 0;
@@ -103,8 +103,7 @@ body.loading {
   gap: 80px;
   justify-content: center;
 }
-
-button {
+ .button-explore button {
   padding: 15px 40px;
   border-radius: 50px !important;
   cursor: pointer;
@@ -117,17 +116,16 @@ button {
   font-size: 15px;
   transition: all 0.5s ease;
 }
-button:hover {
+.button-explore button:hover {
   letter-spacing: 3px;
   color: #473809;
 }
-button:active {
+.button-explore button:active {
   letter-spacing: 3px;
   color: #473809;
   transform: translateY(10px);
   transition: 100ms;
 }
-
 .coffee-btn:hover {
   background-color: #B89A68;
   box-shadow: #3E2C24 0px 7px 29px 0px;
@@ -151,7 +149,7 @@ bottom: 1px;
 left: 25%;
 }
 .scroll-down {
-  font-size: 18px;
+  font-size: 16px;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
@@ -248,23 +246,35 @@ img {
   .logo-wrapper {
     width: 80vw; /* shrink container so logo scales down smoothly */
   }
-
   .hero-logo {
     width: 80vw; /* make logo larger relative to viewport on tablets */
   }
-
   .hero-text {
-    top: 80%; /* move text a little lower */
-    width: 60%; /* allow more wrap space */
+    top: 75%; /* move text a little lower */
+    width: 100%; /* allow more wrap space */
   }
-
   .hero-text h1 {
-    font-size: clamp(20px, 4vw, 30px); /* smaller text scaling */
+    font-size: clamp(20px, 4vw, 25px); /* smaller text scaling */
     word-wrap: break-word;
     overflow-wrap: break-word;
     word-break: break-word;
   }
-}
+
+  .button-explore {
+    gap: 40px;
+  }
+  .button-explore button {
+    padding: 10px 20px;
+    font-size: 13px; 
+  }
+  .scroll-down-btn {
+    top: 95%;
+    left: 20%;
+  }
+  .scroll-down {
+    font-size: 15px;
+  } 
+  }
 
 /* 📱 Extra small: screen width ≤ 480px */
 @media (max-width: 480px) {
@@ -275,19 +285,34 @@ img {
   .logo-wrapper {
     width: 90vw; /* almost full width on mobile */
   }
-
   .hero-logo {
     width: 90vw; /* logo appears more visible on small screens */
   }
-
   .hero-text {
-    top: 85%;
-    width: 95%;
+    top: 80%;
+    width: 60%;
   }
-
   .hero-text h1 {
-    font-size: clamp(16px, 6vw, 36px);
+    font-size: clamp(16px, 6vw, 20px);
     line-height: 1.2;
   }
+
+  .button-explore {
+    flex-direction: column;
+    gap: 15px; 
+    top: 105%;
+  }
+  .button-explore button {
+    width: 40%;  
+    margin: 0 auto;
+    font-size: 10px; 
+  }
+  .scroll-down-btn {
+    top: 120%;
+    left: 30%;
+  }
+  .scroll-down {
+    font-size: 10px;
+  } 
 }
 
