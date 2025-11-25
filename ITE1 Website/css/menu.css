@@ -137,14 +137,13 @@ body {
   max-width: 220px;
 }
 
-/* prevent zoom/cropping: show whole image with letterboxing */
 .drink-card img {
-  width: auto;              /* don't force full width if aspect differs */
-  max-width: 100%;          /* limit to card width */
-  height: 140px;            /* fixed visual height */
+  width: auto;              
+  max-width: 100%;          
+  height: 140px;            
   max-height: 140px;
-  object-fit: contain;      /* show whole image, don't crop */
-  background-color: #f7f3ef;/* visible letterbox area */
+  object-fit: contain;      
+  background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
 }
@@ -196,14 +195,14 @@ body {
   max-width: 220px;
 }
 
-/* prevent zoom/cropping: show whole image with letterboxing */
+
 .drink-card img {
-  width: auto;              /* don't force full width if aspect differs */
-  max-width: 100%;          /* limit to card width */
-  height: 140px;            /* fixed visual height */
+  width: auto;              
+  max-width: 100%;          
+  height: 140px;            
   max-height: 140px;
-  object-fit: contain;      /* show whole image, don't crop */
-  background-color: #f7f3ef;/* visible letterbox area */
+  object-fit: contain;      
+  background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
 }
@@ -255,14 +254,14 @@ body {
   max-width: 220px;
 }
 
-/* prevent zoom/cropping: show whole image with letterboxing */
+
 .drink-card img {
-  width: auto;              /* don't force full width if aspect differs */
-  max-width: 100%;          /* limit to card width */
-  height: 140px;            /* fixed visual height */
+  width: auto;              
+  max-width: 100%;          
+  height: 140px;            
   max-height: 140px;
-  object-fit: contain;      /* show whole image, don't crop */
-  background-color: #f7f3ef;/* visible letterbox area */
+  object-fit: contain;      
+  background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
 }
@@ -314,14 +313,14 @@ body {
   max-width: 220px;
 }
 
-/* prevent zoom/cropping: show whole image with letterboxing */
+
 .drink-card img {
-  width: auto;              /* don't force full width if aspect differs */
-  max-width: 100%;          /* limit to card width */
-  height: 140px;            /* fixed visual height */
+  width: auto;              
+  max-width: 100%;         
+  height: 140px;            
   max-height: 140px;
-  object-fit: contain;      /* show whole image, don't crop */
-  background-color: #f7f3ef;/* visible letterbox area */
+  object-fit: contain;      
+  background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
 }
