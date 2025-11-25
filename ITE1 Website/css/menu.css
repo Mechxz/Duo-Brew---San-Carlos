@@ -1,0 +1,335 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfaf6;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #BA8E69;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #d9b07b;
+}
+
+/* Menu Section Layout */
+.menu-section {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #BA8E69;
+  border-right: 6px solid white;
+  padding: 40px 20px;
+  width: 220px;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.menu-list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.menu-list li {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-list .active a {
+  color: #d9b07b;
+}
+
+/* Divider with "ADDITIONAL" */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: white;
+  margin: 0 10px;
+}
+
+
+/* Milk Tea Items */
+.milk-tea-items {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.milk-tea-items h2 {
+  margin-bottom: 20px;
+  color: #2f1d13;
+}
+
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.drink-card {
+  background-color: #fff;
+  border: 2px solid #d9b07b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 220px;
+}
+
+/* prevent zoom/cropping: show whole image with letterboxing */
+.drink-card img {
+  width: auto;              /* don't force full width if aspect differs */
+  max-width: 100%;          /* limit to card width */
+  height: 140px;            /* fixed visual height */
+  max-height: 140px;
+  object-fit: contain;      /* show whole image, don't crop */
+  background-color: #f7f3ef;/* visible letterbox area */
+  border-radius: 8px;
+  display: block;
+}
+
+.drink-card p {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #c49880;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* END OF MILK TEA */
+
+/* FRAPPE Items */
+.frappe-items {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.frappe-items h2 {
+  margin-bottom: 20px;
+  color: #2f1d13;
+}
+
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.drink-card {
+  background-color: #fff;
+  border: 2px solid #d9b07b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 220px;
+}
+
+/* prevent zoom/cropping: show whole image with letterboxing */
+.drink-card img {
+  width: auto;              /* don't force full width if aspect differs */
+  max-width: 100%;          /* limit to card width */
+  height: 140px;            /* fixed visual height */
+  max-height: 140px;
+  object-fit: contain;      /* show whole image, don't crop */
+  background-color: #f7f3ef;/* visible letterbox area */
+  border-radius: 8px;
+  display: block;
+}
+
+.drink-card p {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #c49880;
+}
+
+/* END OF FRAPPE */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FRUIT TEA Items */
+.fruit-tea-items {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.fruit-tea-items h2 {
+  margin-bottom: 20px;
+  color: #2f1d13;
+}
+
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.drink-card {
+  background-color: #fff;
+  border: 2px solid #d9b07b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 220px;
+}
+
+/* prevent zoom/cropping: show whole image with letterboxing */
+.drink-card img {
+  width: auto;              /* don't force full width if aspect differs */
+  max-width: 100%;          /* limit to card width */
+  height: 140px;            /* fixed visual height */
+  max-height: 140px;
+  object-fit: contain;      /* show whole image, don't crop */
+  background-color: #f7f3ef;/* visible letterbox area */
+  border-radius: 8px;
+  display: block;
+}
+
+.drink-card p {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #c49880;
+}
+
+/* END OF FRAPPE */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ICED COFFEE Items */
+.iced-coffee-items {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.iced-coffee-items h2 {
+  margin-bottom: 20px;
+  color: #2f1d13;
+}
+
+.drinks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.drink-card {
+  background-color: #fff;
+  border: 2px solid #d9b07b;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 220px;
+}
+
+/* prevent zoom/cropping: show whole image with letterboxing */
+.drink-card img {
+  width: auto;              /* don't force full width if aspect differs */
+  max-width: 100%;          /* limit to card width */
+  height: 140px;            /* fixed visual height */
+  max-height: 140px;
+  object-fit: contain;      /* show whole image, don't crop */
+  background-color: #f7f3ef;/* visible letterbox area */
+  border-radius: 8px;
+  display: block;
+}
+
+.drink-card p {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #c49880;
+}
+
+/* END OF ICE COFFEE */
