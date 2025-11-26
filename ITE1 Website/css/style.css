@@ -1,5 +1,6 @@
 :root {
   --primary-color: #F5F0E8;
+  --header-color: #674F04;
   --font-family: 'Manrope', sans-serif;
 }
 html, body {
@@ -113,7 +114,7 @@ body.loading {
   box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 20px;
   transition: all 0.5s ease;
 }
 .button-explore button:hover {
@@ -145,11 +146,11 @@ body.loading {
 
 .scroll-down-btn {
 position: fixed;
-bottom: 1px;
+top: 100%;
 left: 25%;
 }
 .scroll-down {
-  font-size: 16px;
+  font-size: 17px;
   color: #e1e1e1;
   font-family: inherit;
   font-weight: 800;
@@ -190,7 +191,24 @@ left: 25%;
 
 
 
-
+/*nav*/
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0 10%;
+  width: auto;
+  height: 60px;
+  background-color: var(--header-color);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
 
 /* Other sections scroll normally */
 .content {
