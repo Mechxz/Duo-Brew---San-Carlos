@@ -13,31 +13,33 @@ body {
     box-sizing: border-box;
 }
 
-        /* ---------------- NAVBAR ---------------- */
+/* ---------------- NAVBAR ---------------- */
 .floating-nav {
-  position: sticky;
+  position: relative; /* needed for logo absolute */
   top: 50px;
   z-index: 999;
   width: 90%;
   margin: 0 auto;
   background: var(--header-color);
-  padding: 20px 40px;
+  padding: 20px 100px;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: 0 4px 30px rgba(0,0,0,0.12);
+  flex-wrap: nowrap;
 }
 
 /* LEFT & RIGHT MENU */
 .floating-nav ul {
   display: flex;
-  gap: 150px;
+  gap: 180px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* LINKS */
 .floating-nav a,
 .floating-nav a:visited,
 .floating-nav a:hover,
@@ -47,7 +49,7 @@ body {
   text-decoration: none;
   font-family: var(--font-family);
   font-weight: 500;
-    font-size: 30px;
+  font-size: 30px;
   position: relative;
 }
 
@@ -67,95 +69,119 @@ body {
   width: 100%;
 }
 
+/* SPECIAL FIRST LINK */
 .nav-left li:first-child a {
   color: #ffffff;
   font-weight: 700;
 }
 
-/* CENTER LOGO */
+/* CENTER LOGO - ABSOLUTE */
 .logo-holder {
-  position: absolute;       
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) translateY(0); /* center + belt effect */
+  z-index: 10;
 }
 
 .nav-logo {
   width: 130px;
   border-radius: 100%;
   object-fit: cover;
-
-  /* Nice effect para mukhang nakaangat */
   background: white;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-
-
-
-/* RESPONSIVE tablet */
+/* ---------------- TABLET ---------------- */
 @media (max-width: 768px) {
   .floating-nav {
-    gap: 100px;
-    padding: 15px;
+    padding: 15px 60px; /* slightly smaller padding */
   }
 
   .floating-nav ul {
-    gap: 60px;
-    justify-content: center;
+    gap: 50px; /* reduce gap */
   }
 
   .floating-nav a {
-    font-size: 20px;
+    font-size: 24px; /* smaller text */
   }
 
   .nav-logo {
-    width: 100px;
+    width: 100px; /* scale logo */
+  }
+  .logo-holder {
+    transform: translate(-50%, -50%) translateY(0px); /* adjust belt */
   }
 
 }
 
-/* RESPONSIVE mobile */
+/* ---------------- MOBILE ---------------- */
 @media (max-width: 480px) {
   .floating-nav {
-    gap: 60px;
-    padding: 10px;
+    padding: 10px 30px; /* smaller padding for mobile */
   }
 
   .floating-nav ul {
-    gap: 20px;
-    justify-content: center;
+    gap: 30px; /* reduce gap */
   }
 
   .floating-nav a {
-    font-size: 16px;
+    font-size: 16px; /* smaller text */
   }
 
   .nav-logo {
-    width: 80px;
+    width: 80px; /* smaller logo */
   }
 
+  .logo-holder {
+    transform: translate(-50%, -50%) translateY(0px); /* adjust belt */
+  }
 }
+
+
+
 
 
 
         /* ---------------- SECTION TITLES ---------------- */
         .section-title {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--header-color);
-            margin-bottom: 30px;
-            margin-top: 100px;
-            padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* space between lines and text */
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--header-color);
+    margin: 100px 0 30px;
         }
 
         .section-title::before,
         .section-title::after {
-            content: "";
-            display: inline-block;
-            width: 30%;
-            height: 3px;
-            background: var(--header-color);
-            margin: 0 50px;
+    content: "";
+    flex: 1;              /* stretch to fill space */
+    height: 3px;
+    background: var(--header-color);
             vertical-align: middle;
+        }
+
+        @media (max-width: 768px) {
+          .section-title {
+              font-size: 26px;
+              gap: 30px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .section-title {
+              font-size: 20px;
+              gap: 20px;
+              padding: 0 20px;
+          }
+          .section-title::before,
+          .section-title::after {
+              height: 2px;
+          }
         }
 
         /* ---------------- BEST SELLER ---------------- */
