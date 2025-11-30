@@ -305,12 +305,12 @@ left: 25%;
 /* ---------------- MOBILE ---------------- */
 @media (max-width: 480px) {
   .floating-nav {
-    padding: 10px 30px;
+    padding: 10px 20px;
     /* smaller padding for mobile */
   }
 
   .floating-nav ul {
-    gap: 30px;
+    gap: 25px;
     /* reduce gap */
   }
 
@@ -423,8 +423,9 @@ footer {
   position: relative;
   z-index: 1;
   background: var(--footer-color);
-  padding: 40px 20px;
+  padding: 60px 20px;
   color: var(--footer-text-color);
+  font-family: var(--font-family);
 }
 
 footer a {
@@ -441,10 +442,25 @@ footer a:hover {
   width: 200px;
   border-radius: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .footer-section h5 {
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.footer-section p {
+  font-size: 16px;
+  margin: 5px 0 0;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .copyright {
@@ -462,7 +478,77 @@ footer a:hover {
 }
 
 
+/* ---------------- FOOTER RESPONSIVE ---------------- */
 
+/* Desktop: 4 columns */
+@media (min-width: 992px) {
+  .footer-main {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* Tablet: 2 rows of 2 columns */
+@media (min-width: 768px) and (max-width: 991px) {
+  .footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    width: 120px;
+    margin: 0 auto 10px;
+  }
+}
+
+/* Mobile: all stacked */
+@media (max-width: 480px) {
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+
+  .footer-section h5 {
+    justify-content: center;
+  }
+}
+
+/* Facebook row */
+footer .row.mt-3 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer .row.mt-3 a svg {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
 
 
 
