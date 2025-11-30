@@ -32,18 +32,22 @@ body {
 /* LEFT & RIGHT MENU */
 .floating-nav ul {
   display: flex;
-  gap: 120px;
+  gap: 150px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.floating-nav a {
+.floating-nav a,
+.floating-nav a:visited,
+.floating-nav a:hover,
+.floating-nav a:active,
+.floating-nav a:focus {
+  color: #D9D9D9 !important;
   text-decoration: none;
-  color: #D9D9D9;
   font-family: var(--font-family);
   font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
   position: relative;
 }
 
@@ -52,7 +56,7 @@ body {
   content: "";
   width: 0%;
   height: 2px;
-  background: var(--header-color);
+  background: #D9D9D9;
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -61,6 +65,11 @@ body {
 
 .floating-nav a:hover::after {
   width: 100%;
+}
+
+.nav-left li:first-child a {
+  color: #ffffff;
+  font-weight: 700;
 }
 
 /* CENTER LOGO */
@@ -78,22 +87,51 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* RESPONSIVE */
+
+
+
+/* RESPONSIVE tablet */
 @media (max-width: 768px) {
   .floating-nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+    gap: 100px;
+    padding: 15px;
   }
 
-  .logo-holder {
-    top: -10px; /* smaller overlap for mobile */
+  .floating-nav ul {
+    gap: 60px;
+    justify-content: center;
   }
 
-  .nav-left,
-  .nav-right {
-    gap: 15px;
+  .floating-nav a {
+    font-size: 20px;
   }
+
+  .nav-logo {
+    width: 100px;
+  }
+
+}
+
+/* RESPONSIVE mobile */
+@media (max-width: 480px) {
+  .floating-nav {
+    gap: 60px;
+    padding: 10px;
+  }
+
+  .floating-nav ul {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .floating-nav a {
+    font-size: 16px;
+  }
+
+  .nav-logo {
+    width: 80px;
+  }
+
 }
 
 
@@ -106,16 +144,17 @@ body {
             color: var(--header-color);
             margin-bottom: 30px;
             margin-top: 100px;
+            padding: 0 30px;
         }
 
         .section-title::before,
         .section-title::after {
             content: "";
             display: inline-block;
-            width: 60px;
-            height: 2px;
+            width: 30%;
+            height: 3px;
             background: var(--header-color);
-            margin: 0 15px;
+            margin: 0 50px;
             vertical-align: middle;
         }
 
@@ -187,7 +226,6 @@ body {
 
         .homepage{
   display: block;
-  opacity: 1;
   background-color: var(--primary-color);
   font-family: var(--font-family);
 }
