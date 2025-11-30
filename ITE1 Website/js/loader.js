@@ -24,4 +24,15 @@ function nextHero() {
 // Start slideshow every 5 seconds
 setInterval(nextHero, 5000);
 
+// navigation bar scroll behavior
+const nav = document.getElementById("mainNav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    nav.classList.add("show-nav");
+  } else {
+    nav.classList.remove("show-nav");
+  }
+});
+
 
