@@ -16,7 +16,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: var(--header-color);
-  padding-top: 50px; /* to prevent overlap with sticky navbar */
+  padding-top: 50px;
+  /* to prevent overlap with sticky navbar */
   background-color: var(--primary-color);
 }
 
@@ -217,7 +218,8 @@ iframe {
 }
 
 .map-button {
-  margin-top: 20px; /* add real spacing */
+  margin-top: 20px;
+  /* add real spacing */
   text-align: center;
 }
 
@@ -270,6 +272,7 @@ footer a:hover {
   gap: 10px;
   font-size: 18px;
 }
+
 .footer-section p {
   font-size: 16px;
   margin: 5px 0 0;
@@ -288,7 +291,7 @@ footer a:hover {
 }
 
 
-.content{
+.content {
   position: relative;
   z-index: 1;
   padding: 50px 20px;
