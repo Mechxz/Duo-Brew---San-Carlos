@@ -16,7 +16,7 @@ body {
         /* ---------------- NAVBAR ---------------- */
 .floating-nav {
   position: sticky;
-  top: 20px;
+  top: 50px;
   z-index: 999;
   width: 90%;
   margin: 0 auto;
@@ -69,9 +69,8 @@ body {
 }
 
 .nav-logo {
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
+  width: 130px;
+  border-radius: 100%;
   object-fit: cover;
 
   /* Nice effect para mukhang nakaangat */
@@ -106,6 +105,7 @@ body {
             font-weight: 700;
             color: var(--header-color);
             margin-bottom: 30px;
+            margin-top: 100px;
         }
 
         .section-title::before,
