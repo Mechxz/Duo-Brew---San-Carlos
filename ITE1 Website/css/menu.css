@@ -135,6 +135,12 @@ body {
   gap: 8px;
   width: 100%;
   max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drink-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .drink-card img {
@@ -146,18 +152,23 @@ body {
   background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.drink-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 .drink-card p {
   margin-top: 6px;
   font-weight: bold;
   color: #c49880;
+  transition: color 0.3s ease;
 }
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+.drink-card:hover p {
+  color: #BA8E69;
 }
 
 /* END OF MILK TEA */
@@ -193,8 +204,13 @@ body {
   gap: 8px;
   width: 100%;
   max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.drink-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 
 .drink-card img {
   width: auto;              
@@ -205,12 +221,23 @@ body {
   background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.drink-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 .drink-card p {
   margin-top: 6px;
   font-weight: bold;
   color: #c49880;
+  transition: color 0.3s ease;
+}
+
+.drink-card:hover p {
+  color: #BA8E69;
 }
 
 /* END OF FRAPPE */
@@ -252,8 +279,13 @@ body {
   gap: 8px;
   width: 100%;
   max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.drink-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 
 .drink-card img {
   width: auto;              
@@ -264,12 +296,23 @@ body {
   background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.drink-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 .drink-card p {
   margin-top: 6px;
   font-weight: bold;
   color: #c49880;
+  transition: color 0.3s ease;
+}
+
+.drink-card:hover p {
+  color: #BA8E69;
 }
 
 /* END OF FRAPPE */
@@ -311,8 +354,14 @@ body {
   gap: 8px;
   width: 100%;
   max-width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+.drink-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 
 .drink-card img {
   width: auto;              
@@ -323,12 +372,23 @@ body {
   background-color: #f7f3ef;
   border-radius: 8px;
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.drink-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
 .drink-card p {
   margin-top: 6px;
   font-weight: bold;
   color: #c49880;
+  transition: color 0.3s ease;
+}
+
+.drink-card:hover p {
+  color: #BA8E69;
 }
 
 /* END OF ICE COFFEE */
