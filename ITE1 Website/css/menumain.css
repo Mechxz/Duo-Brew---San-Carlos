@@ -190,7 +190,7 @@ body {
 }
 
 /* SPECIAL FIRST LINK */
-.nav-left li:first-child a {
+.nav-left li:nth-child(2) a {
   color: #ffffff;
   font-weight: 700;
 }

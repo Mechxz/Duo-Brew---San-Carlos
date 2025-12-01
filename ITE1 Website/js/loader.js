@@ -46,10 +46,10 @@ let index = 0;
 
 // Custom links per drink
 const menuLinks = [
-    "menu-coffee.html",      // slide 1
-    "menu-milktea.html",     // slide 2
-    "menu-signature.html",   // slide 3
-    "menu-noncoffee.html"    // slide 4
+    "menu.html",      // slide 1
+    "menu.html",     // slide 2
+    "menu.html",   // slide 3
+    "menu.html"    // slide 4
 ];
 
 function showSlide(i) {

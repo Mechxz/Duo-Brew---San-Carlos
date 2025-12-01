@@ -84,7 +84,7 @@ a {
 }
 
 /* SPECIAL FIRST LINK */
-.nav-left li:first-child a {
+.nav-left li:nth-child(4) a {
   color: #ffffff;
   font-weight: 700;
 }
