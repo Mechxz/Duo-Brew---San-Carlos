@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duo Brew - San Carlos | About</title>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/loader.css">
+    <title>Duo Brew - San Carlos | Menu</title>
+    <link rel="stylesheet" href="/ITE1 Website/css/menumain.css">
+        <link rel="stylesheet" href="css/loader.css">
     <link rel="shortcut icon" href="Pics/FavIcon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-        <!-- 🔸 Loading Screen -->
+    <!-- 🔸 Loading Screen -->
     <div class="loading-container">
         <div id="loader">
             <div class="loading-bar"></div>
@@ -23,9 +24,8 @@
         </div>
     </div>
 
-    <section class="about">
-    <header>
-            <nav class="floating-nav">
+
+                <nav class="floating-nav">
                 <ul class="nav-left">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
@@ -40,30 +40,96 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-    </header>
+<div class="container">
 
-        <div class="about-container">
-            <img src="/ITE1 Website/Pics/Owners/589915240_695616713343411_643183171394052029_n.jpg" alt="Owners Pic and Staff">
-            <div class="about-text">
-                <h2>About Duo Brew — Our Story</h2>
-<p>
-Duo Brew began as a simple dream shared by a couple who believed in the power of good coffee and even better connections. Nestled in Brgy. San Carlos, Binangonan, Rizal, the café is proudly owned and managed by Mr. Ryzhick Mendoza and his wife, both of whom share a deep entrepreneurial spirit and a passion for bringing people together.
-</p>
-<p>
-Long before the café opened its doors, the couple often talked about creating a comforting space where students, families, and friends could gather, unwind, and enjoy quality beverages without breaking their budget. What started as late-night conversations soon grew into a vision they were determined to bring to life. With months of careful planning, dedication, and teamwork, Duo Brew was born — a café built not just from resources, but from heart.
-</p>
-<p>
-From its first day of operation, Duo Brew has continued to grow alongside the community it serves. Located near a school, it naturally became a second home for many students — a place where they could study, laugh, and share stories over their favorite drinks. Word quickly spread about the café’s warm atmosphere and affordable yet delicious beverages, making Duo Brew a popular spot for anyone looking for comfort in a cup.
-</p>
-<p>
-But Duo Brew is more than a café. For the Mendozas, it is a space where small moments matter — where a single cup can spark new friendships, inspire ideas, or simply brighten someone’s day. Every drink crafted here is made with thoughtfulness and care, reflecting the couple’s belief that great experiences begin with genuine connection.
-</p>
-<p>
-At Duo Brew, we don’t just serve coffee — we create moments. Moments of comfort. Moments of inspiration. Moments that bring people closer. And as we continue to grow, our story remains rooted in the same purpose that started it all: to brew happiness, one cup at a time.
-</p>
+
+
+    <!-- LEFT CATEGORY SIDEBAR -->
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul id="categoryList">
+            <li data-target="icecoffee">Ice Coffee</li>
+            <li data-target="frappe">Frappe</li>
+            <li data-target="coffeefrappe">Coffee Frappe</li>
+        </ul>
+    </aside>
+
+    <!-- RIGHT SIDE MENU CONTENT -->
+    <main class="menu">
+
+        <!-- CATEGORY ROW TEMPLATE REPEATED 8x -->
+
+        <!-- 2. ICE COFFEE -->
+        <section id="icecoffee" class="category-section">
+            <div class="row-header">
+                <h2>Ice Coffee</h2>
+                <button class="see-full">See Full Menu</button>
             </div>
-        </div>
-    </section>
+
+            <div class="drinks-row">
+                <div class="drink-card">Drink 1</div>
+                <div class="drink-card">Drink 2</div>
+                <div class="drink-card">Drink 3</div>
+                <div class="drink-card">Drink 4</div>
+                <div class="drink-card">Drink 5</div>
+                <div class="drink-card">Drink 6</div>
+                <div class="drink-card">Drink 7</div>
+                <div class="drink-card">Drink 8</div>
+                <div class="drink-card">Drink 9</div>
+                <div class="drink-card">Drink 10</div>
+            </div>
+        </section>
+
+        <!-- 3. FRAPPE -->
+        <section id="frappe" class="category-section">
+            <div class="row-header">
+                <h2>Frappe</h2>
+                <button class="see-full">See Full Menu</button>
+            </div>
+
+            <div class="drinks-row">
+                <div class="drink-card">Drink 1</div>
+                <div class="drink-card">Drink 2</div>
+                <div class="drink-card">Drink 3</div>
+                <div class="drink-card">Drink 4</div>
+                <div class="drink-card">Drink 5</div>
+                <div class="drink-card">Drink 6</div>
+                <div class="drink-card">Drink 7</div>
+                <div class="drink-card">Drink 8</div>
+                <div class="drink-card">Drink 9</div>
+                <div class="drink-card">Drink 10</div>
+            </div>
+        </section>
+
+        <!-- 7. COFFEE FRAPPE -->
+        <section id="coffeefrappe" class="category-section">
+            <div class="row-header">
+                <h2>Coffee Frappe</h2>
+                <button class="see-full">See Full Menu</button>
+            </div>
+
+            <div class="drinks-row">
+                <div class="drink-card">Drink 1</div>
+                <div class="drink-card">Drink 2</div>
+                <div class="drink-card">Drink 3</div>
+                <div class="drink-card">Drink 4</div>
+                <div class="drink-card">Drink 5</div>
+                <div class="drink-card">Drink 6</div>
+                <div class="drink-card">Drink 7</div>
+                <div class="drink-card">Drink 8</div>
+                <div class="drink-card">Drink 9</div>
+                <div class="drink-card">Drink 10</div>
+            </div>
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+
             <!-- ---------------- FOOTER ---------------- -->
         <footer id="contact">
             <div class="container">
@@ -126,8 +192,7 @@ At Duo Brew, we don’t just serve coffee — we create moments. Moments of comf
             </div>
         </footer>
 
-
-        <!-- 🔸 Javascript -->
-    <script src="js/loader.js"></script>
+<script src="menu.js"></script>
+<script src="/ITE1 Website/js/loader.js"></script>
 </body>
 </html>
