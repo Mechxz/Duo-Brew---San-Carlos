@@ -110,8 +110,7 @@ body {
 }
 
 .drink-card img {
-    width: 100%;
-    height: 70%;
+    width: 60%;
     object-fit: cover;
 }
 
