@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(sec => {
-        const top = sec.offsetTop - 150;
+        const top = sec.offsetTop - 250;
         if (scrollY >= top) current = sec.id;
     });
 
