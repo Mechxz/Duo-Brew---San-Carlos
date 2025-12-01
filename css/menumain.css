@@ -59,6 +59,22 @@ body {
     font-weight: bold;
 }
 
+
+/*MOBILE*/
+@media (max-width:480px) {
+  .sidebar{
+    width:150px;
+    padding: 10px;
+  }
+  .row-header h2{
+    font-size: 30px;
+  }
+  .menu{
+    margin-left: 10px;
+    width: calc(100% - 100px);
+  }
+}
+
 /* MENU CONTENT */
 .menu {
     margin-left: 260px;
